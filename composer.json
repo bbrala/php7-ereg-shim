@@ -1,0 +1,17 @@
+{
+    "name": "bbrala/php7-eregi-shim",
+    "description": "Shim for eregi functions",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Björn Brala",
+            "email": "github@bjornbrala.com",
+            "homepage": "http://bjornbrala.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "files": ["lib/eregi.php"]
+    }
+}
