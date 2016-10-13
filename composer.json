@@ -1,6 +1,6 @@
 {
-    "name": "bbrala/php7-eregi-shim",
-    "description": "Shim for eregi functions",
+    "name": "bbrala/php7-ereg-shim",
+    "description": "Shim for ereg functions",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -13,6 +13,6 @@
     "minimum-stability": "stable",
     "require": {},
     "autoload": {
-        "files": ["lib/eregi.php"]
+        "files": ["lib/ereg.php"]
     }
 }
