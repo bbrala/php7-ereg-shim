@@ -1,12 +1,12 @@
 <?php
 namespace {
     if (!function_exists('ereg')) {
-        function ereg($pattern, $subject, &$matches = [])
+        function ereg($pattern, $subject, &$matches = array())
         {
             return preg_match('/'.$pattern.'/', $subject, $matches);
         }
 
-        function eregi($pattern, $subject, &$matches = [])
+        function eregi($pattern, $subject, &$matches = array())
         {
             return preg_match('/'.$pattern.'/i', $subject, $matches);
         }
