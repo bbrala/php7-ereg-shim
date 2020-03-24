@@ -13,7 +13,7 @@ namespace {
         {
             foreach (array('/', '@', '#', '%', '±') as $boundary)
             if (false === strpos($pattern, $boundary)) { 
-                return preg_match($boundary.$pattern.$boundary, $subject, $matches);
+                return preg_match($boundary.$pattern.$boundary.'i', $subject, $matches);
             }
         }
 
@@ -29,7 +29,7 @@ namespace {
         {
             foreach (array('/', '@', '#', '%', '±') as $boundary)
             if (false === strpos($pattern, $boundary)) { 
-                return preg_replace($boundary.$pattern.$boundary, $replacement, $string);
+                return preg_replace($boundary.$pattern.$boundary.'i', $replacement, $string);
             }
         }
 
@@ -45,7 +45,7 @@ namespace {
         {
             foreach (array('/', '@', '#', '%', '±') as $boundary)
             if (false === strpos($pattern, $boundary)) { 
-                return preg_split($boundary.$pattern.$boundary, $subject, $limit);
+                return preg_split($boundary.$pattern.$boundary.'i', $subject, $limit);
             }
         }
     }
