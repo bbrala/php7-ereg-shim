@@ -3,32 +3,50 @@ namespace {
     if (!function_exists('ereg')) {
         function ereg($pattern, $subject, &$matches = array())
         {
-            return preg_match('/'.$pattern.'/', $subject, $matches);
+            foreach (array('/', '@', '#', '%', '±') as $boundary)
+            if (false === strpos($pattern, $boundary)) { 
+                return preg_match($boundary.$pattern.$boundary, $subject, $matches);
+            }
         }
 
         function eregi($pattern, $subject, &$matches = array())
         {
-            return preg_match('/'.$pattern.'/i', $subject, $matches);
+            foreach (array('/', '@', '#', '%', '±') as $boundary)
+            if (false === strpos($pattern, $boundary)) { 
+                return preg_match($boundary.$pattern.$boundary, $subject, $matches);
+            }
         }
 
         function ereg_replace($pattern, $replacement, $string)
         {
-            return preg_replace('/'.$pattern.'/', $replacement, $string);
+            foreach (array('/', '@', '#', '%', '±') as $boundary)
+            if (false === strpos($pattern, $boundary)) { 
+                return preg_replace($boundary.$pattern.$boundary, $replacement, $string);
+            }
         }
 
         function eregi_replace($pattern, $replacement, $string)
         {
-            return preg_replace('/'.$pattern.'/i', $replacement, $string);
+            foreach (array('/', '@', '#', '%', '±') as $boundary)
+            if (false === strpos($pattern, $boundary)) { 
+                return preg_replace($boundary.$pattern.$boundary, $replacement, $string);
+            }
         }
 
         function split($pattern, $subject, $limit = -1)
         {
-            return preg_split('/'.$pattern.'/', $subject, $limit);
+            foreach (array('/', '@', '#', '%', '±') as $boundary)
+            if (false === strpos($pattern, $boundary)) { 
+                return preg_split($boundary.$pattern.$boundary, $subject, $limit);
+            }
         }
 
         function spliti($pattern, $subject, $limit = -1)
         {
-            return preg_split('/'.$pattern.'/i', $subject, $limit);
+            foreach (array('/', '@', '#', '%', '±') as $boundary)
+            if (false === strpos($pattern, $boundary)) { 
+                return preg_split($boundary.$pattern.$boundary, $subject, $limit);
+            }
         }
     }
 }
