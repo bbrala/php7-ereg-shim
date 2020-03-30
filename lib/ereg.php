@@ -38,7 +38,7 @@ namespace {
         }
 
         /**
-         * @method _ereg_determine_boundary Prepare the pattern and determine a valid boundary. 
+         * @method _ereg_determine_boundary Determine a valid boundary based on the pattern. 
          * 
          * @var string $pattern The possibly escaped pattern to match for. 
          * @return string a suitable RegEx boundary
@@ -58,7 +58,7 @@ namespace {
                 }
             }
 
-            throw new Exception("Very sorry, could not shim the regular expression. Please follow the debug trace two steps back to see where the incompatible ereg-style function call is made.");
+            throw new Exception("Very sorry, could not shim the regular expression. Please follow the debug trace to see where the incompatible ereg-style function call is made.");
         }
     }
 }
