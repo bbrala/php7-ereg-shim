@@ -52,7 +52,7 @@ namespace {
          */
         function _ereg_determine_boundary($pattern) 
         {
-            foreach (array('/', '@', '#', '%', '±') as $boundary) {
+            foreach (array('/', '@', '#', '%') as $boundary) {
                 if (false === strpos($pattern, $boundary)) { 
                     return $boundary;
                 }
